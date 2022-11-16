@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var connection = require('../database.js')
+var router = express.Router()
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
+router.get('/', function (req, res, next) {
+  connection.query('SELECT * FROM stamps ORDER BY id desc', function (err, rows) {
+    if (err) {
+      req.flash('error', err)
+      res.render('profile', { data: '' })
+    } else {
+      res.render('profile', { data: rows })
+    }
+  })
+})
+module.exports = router
