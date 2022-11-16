@@ -1,15 +1,12 @@
-var mysql = require('mysql')
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'fredagsmys', //
-  password: '123', //
-  database: 'turbo_bathroom_db',
-})
-connection.connect((err) => {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log('Database connected')
-})
-module.exports = connection
+var mysql = require('mysql');
+var conn = mysql.createConnection({
+  host: 'localhost', // Replace with your host name
+  user: 'fredagsmys',      // Replace with your database username
+  password: '123',      // Replace with your database password
+  database: 'turbo_bathroom_db' // // Replace with your database Name
+}); 
+conn.connect(function(err) {
+  if (err) throw err;
+  console.log('Database is connected successfully !');
+});
+module.exports = conn;

@@ -3,7 +3,7 @@ var connection = require('../database.js')
 var router = express.Router()
 
 router.get('/', function (req, res, next) {
-  connection.query('SELECT * FROM stamps ORDER BY id desc', function (err, rows) {
+  connection.query('SELECT USER_NAME FROM stamps ORDER BY id desc', function (err, rows) {
     if (err) {
       req.flash('error', err)
       res.render('profile', { data: '' })
