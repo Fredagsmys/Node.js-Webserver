@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var conn = mysql.createConnection({
-  host: 'http://magge321.ddns.net', // Replace with your host name
+  host: 'localhost', // Replace with your host name
   user: 'fredagsmys',      // Replace with your database username
   password: '123',      // Replace with your database password
   database: 'arduinodb' // // Replace with your database Name
