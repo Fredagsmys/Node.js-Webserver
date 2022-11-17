@@ -142,6 +142,6 @@ a {
 }
 
 .WelcomeView {
-  background: url("background.jpg") left bottom;
+  background: url("iot.png") left bottom;
   background-size: cover;
 }
