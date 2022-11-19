@@ -4,7 +4,8 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "fredagmys",
   password: "123",
-  database: "arduinodb"
+  database: "arduinodb",
+  port: '/var/run/mysqld/mysqld.sock'
 });
 
 con.connect(function(err) {
