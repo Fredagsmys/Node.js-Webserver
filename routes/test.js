@@ -3,7 +3,8 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "localhost",
   user: "fredagmys",
-  password: "123"
+  password: "123",
+  database: "arduinodb"
 });
 
 con.connect(function(err) {
