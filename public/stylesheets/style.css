@@ -52,6 +52,11 @@ a {
   user-select: none;
 }
 
+ul {
+  font-family: "Raleway", sans-serif;
+
+}
+
 #root {
   display: flex;
   flex-direction: column;
